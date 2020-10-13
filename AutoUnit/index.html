@@ -1,0 +1,201 @@
+<!--
+#
+#   Title - AutoUnit
+#   Author : KIM JAE HOON
+#
+#   Date : 20. 08. 26.
+#   Last Update : 20. 09. 05.
+#   Version : 0.0.1
+#
+-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="favicon.png" rel="icon" type="image/png">
+        <title>AutoUnit</title>
+        
+        <link href="css/popup.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <link href="css/unit.css" rel="stylesheet" type="text/css">
+        <link href="css/input.css" rel="stylesheet" type="text/css">
+        <link href="css/output.css" rel="stylesheet" type="text/css">
+        <link href="css/history.css" rel="stylesheet" type="text/css">
+        <link href="css/howtouse.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="autounit-data-popup">
+            <div class="content">
+                <img src="res/caution.png">
+                <span notification="기존에 기록이 있습니다, 기존의 기록들을 불러오시겠습니까 ?"></span>
+                <input type="button" value="확인">
+                <input type="button" value="닫기">
+            </div>
+            <div class="empty"></div>
+        </div>
+        <h1 id="autounit-title">Auto Un!t</h1>
+        <div id="autounit">
+            <div class="content">
+                <h2>원하는 단위</h2>
+                <div>UNIT</div>
+                <div class="form">
+                    <input type="radio" name="unit" id="px" checked>
+                    <label for="px">PX</label>
+                    <input type="radio" name="unit" id="vw">
+                    <label for="vw">VW</label>
+                    <input type="radio" name="unit" id="vh">
+                    <label for="vh">VH</label>
+                    <input type="radio" name="unit" id="rem">
+                    <label for="rem">REM</label>
+                    <input type="radio" name="unit" id="em">
+                    <label for="em">EM</label>
+                    <input type="radio" name="unit" id="per">
+                    <label for="per">%</label>
+                </div>
+            </div>
+            <div class="content">
+                <h2>입력</h2>
+                <div>IN</div>
+                <div class="form px-1">
+                    <h2>베이스 값</h2>
+                    <input type="Text" value="1920">
+                    <h2>부모 혹은 루트 값</h2>
+                    <input type="Text" value="100">
+                    <h2>변환하고 싶은 값</h2>
+                    <input type="Text" value="100">
+                </div>
+                <div>
+                    <input type="checkbox" name="pxDetail" id="pxDetail" checked>
+                    <label for="pxDetail">VW/H 변환</label>
+                    <label for="pxDetail">R/EM 변환</label>
+                </div>
+            </div>
+            <div class="content">
+                <h2>결과</h2>
+                <div>OUT</div>
+                <div class="form">
+                    <span></span>
+                    <span>1920</span>
+                    <input type="button" value="계산하기">
+                </div>
+            </div>
+            <div class="content">
+                <div id="history">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="howtouse">
+            <div class="container">
+                <div class="content">
+                    <h2>AUTOUNIT 을 소개합니다</h2>
+                    <p>AutoUnit은 반응형 웹 페이지 개발자 및 디자이너를 위한 보조 솔루션 입니다, 이제 더이상 귀찮은 계산과정들을 직접하지 말고 AutoUnit에게 맡겨보세요.</p>
+                </div>
+                <div class="content">
+                    <h2>계산 가능한 단위들</h2>
+                    <p>AutoUnit은 아래의 값들을 계산하기에 적합합니다 사용하기전에 자신이 원하는 단위가 있는지 한번 확인 해보세요.</p>
+                    <ol>
+                        <li>PX</li>
+                        <li>VW</li>
+                        <li>VH</li>
+                        <li>REM</li>
+                        <li>EM</li>
+                        <li>%</li>
+                    </ol>
+                </div>
+                <div class="content">
+                    <h2>사용하는 방법</h2>
+                    <p>자 이제 시작을 위해 사용하는 방법을 알아보겠습니다, 만약 당신이 프로토타입으로 포토샵과 같은 프로그램에서 디자인한 최대 너비 1920px의 웹 페이지에서 100px의 모양이 얼마만큼의 vw을 가지는지 계산하는 과정은 아래와 같습니다.</p>
+                    <ol>
+                        <li>원하는 단위를 vw로 선택합니다.</li>
+                        <li>베이스 값에 1920(px)을 입력 합니다.</li>
+                        <li>변환하고 싶은 값을 100(px)로 입력 합니다</li>
+                        <li>VW/H 변환에 체크가 되어있는지 확인 합니다.</li>
+                        <li>결과창에 있는 계산하기를 눌러 값을 확인합니다.</li>
+                    </ol>
+                    <hr>
+                    <p>다음으로는 16px을 1rem으로 기준을 잡은 페이지에서 500px이 얼마만큼의 rem을 가지는지 계산하는 과정 입니다.</p>
+                    <ol>
+                        <li>원하는 단위를 rem로 선택합니다.</li>
+                        <li>부모 혹은 루트 값에 16(px)을 입력 합니다.</li>
+                        <li>변환하고 싶은 값을 500(px)로 입력 합니다</li>
+                        <li>결과창에 있는 계산하기를 눌러 값을 확인합니다.</li>
+                    </ol>
+                    <hr>
+                    <p>마지막으로 단축키를 사용하여 16px을 1rem으로 기준으로 잡은 상황에서 31.25rem의 실제 px값을 알아보는 과정 입니다.</p>
+                    <ol>
+                        <li>단축키Q 를 눌러서 원하는 단위를 선택합니다.</li>
+                        <li>변환값이 R/EM이 아니라면 Q를 한번더 누릅니다.</li>
+                        <li>R을 눌러 부모 혹은 루트값에 16(px)을 적습니다.</li>
+                        <li>T를 눌러서 31.25(rem)을 적고 엔터키를 누릅니다.</li>
+                    </ol>
+                </div>
+                <div class="content">
+                    <h2>단축키 모음</h2>
+                    <p>혹시 더욱 빠른 작업을 원하시나요? 그러한 당신을 위한 도움책으로 단축키를 드리겠습니다, 다음의 단축키들은 여러분의 작업속도의 효율을 더욱 증가시켜줄 것 입니다. 각각의 키들을 눌러보면서 숙달해보세요.</p>
+                    <table>
+                        <tr>
+                            <td>단축키</td>
+                            <td>설명</td>
+                        </tr>
+                        <tr>
+                            <td>Q</td>
+                            <td>원하는 단위를 PX단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Q+ Q</td>
+                            <td>PX단위일때 VW/H변환과 R/EM변환을 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td>원하는 단위를 VW단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>원하는 단위를 VH단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>원하는 단위를 REM단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td>원하는 단위를 EM단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>X</td>
+                            <td>원하는 단위를 %단위로 변경합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>입력칸에 베이스 값을 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>R</td>
+                            <td>입력칸에 부모 혹은 루트값을 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>입력칸에 변환하고 싶은 값을 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Enter</td>
+                            <td>결과값을 계산하고 해당값을 복사합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="copyright">
+                Copyright (C) 2020. KIMJAEHOON. All Rights Reserved.
+            </div>
+        </div>
+        <script src="js/key.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/process.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

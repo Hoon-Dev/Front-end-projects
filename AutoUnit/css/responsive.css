@@ -1,0 +1,252 @@
+/*
+@media all and (max-width: 1080px){
+    #autounit-title{
+        padding-left: 0;
+    }
+    #autounit{
+        margin-left: 0;
+    }
+    #howtouse{
+        padding-left: 0;
+    }
+}
+
+@media all and (max-width: 690px){
+    #autounit-title::after{
+        content: "반응형을 계산하다";
+    }
+    #autounit .content:nth-child(2) .form h2{
+        font-size: 19px;
+    }
+    #autounit .content:nth-child(3) span:nth-child(1){
+        width: 77px;
+        height: 40px;
+    }
+
+    #autounit .content:nth-child(3) span:nth-child(2){
+        font-size: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    #autounit .content:nth-child(3) input{
+        padding: 7px 32px;
+        font-size: 15px;
+
+        color: white;
+        background-color: #e02343;
+
+        outline: 0;
+        border: 0;
+        border-radius: 3px;
+    }
+    #autounit #history span{
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width:600px){
+    html,body{
+        min-width: 600px;
+    }
+    body::before{
+        content: "";
+        
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        
+        background-color: rgba(0, 0, 0, 0.6);
+        
+        z-index: 999;
+    }
+    body::after{
+        content: "현재 해상도에서의\a작업은 권장하지 않습니다.";
+        
+        width: 300px;
+        position: fixed;
+        font-size: 20px;
+        
+        top:calc(50% - 62px);
+        left:calc(50% - 150px);
+        padding: 35px 0;
+        
+        text-align: center;
+        white-space: pre;
+        color: #404040;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        
+        z-index: 999;
+    }
+}
+*/
+
+
+/*
+    랩탑 모드
+*/
+@media all and (min-width: 750px) and (max-width: 1080px){
+    #autounit-title{
+        padding-left: 0;
+    }
+    #autounit{
+        margin-left: 0;
+    }
+    #howtouse{
+        padding-left: 0;
+    }
+    
+    #howtouse .content{
+        padding: 5px !important;
+    }
+}
+
+/*
+    태블릿 모드
+*/
+@media all and (min-width: 490px) and (max-width: 750px){
+    #autounit-data-popup .content span::after{
+        content: "기존의 기록들을 불러오시겠습니까 ?";
+    }
+    #autounit-data-popup .content input{
+        width: 80px;
+    }
+    
+    #autounit-title{
+        padding-left: 0;
+    }
+    #autounit-title::after{
+        content: "반응형을 계산하다";
+    }
+    #autounit{
+        margin-left: 0;
+    }
+    #howtouse{
+        padding-left: 0;
+    }
+    
+    #autounit{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #autounit .content{
+        width: 50% !important;
+        flex-basis: auto;
+    }
+    
+    #autounit #history{
+        height: 100%;
+    }
+    #autounit #history li::before{
+        font-size: 28px;
+        line-height: 82px;
+    }
+    #autounit #history li{
+        border-radius: 0;
+        height: 16.7%;
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-bottom: 1px solid #ededed;
+    }
+    
+    #howtouse .content{
+        width: 100%;
+        padding: 5px !important;
+    }
+}
+
+/*
+    모바일 모드
+*/
+@media all and (max-width: 490px){
+    #autounit-title{
+        padding-left: 0;
+    }
+    #autounit{
+        margin-left: 0;
+    }
+    #howtouse{
+        padding-left: 0;
+    }
+    
+    #autounit-data-popup span::after{
+        width: 0px !important;
+        height: 35px;
+        overflow: hidden;
+    }
+    
+    #autounit-title{
+        font-size: 8vw;
+        height: 11vw;
+        padding: 0 !important;
+        padding-left: 5px !important;
+        background-image: none;
+        letter-spacing: -1px;
+    }
+    #autounit-title::after{
+        display: none;
+    }
+    
+    #autounit{
+        width: 98%;
+        margin: 0 auto;
+    }
+    #autounit .content{
+        width: 100% !important;
+        flex-basis: auto;
+    }
+    
+    #autounit .content > h2{
+        margin-top: 10px;
+        font-size: 6vw;
+    }
+    #autounit .content > div:nth-child(2){
+        display: none;
+    }
+    
+    #autounit #history{
+        height: 201px;
+    }
+    
+    #autounit #history li::before {
+        font-size: 24px; 
+        line-height: 65px; 
+    }
+    #autounit #history li{
+        border-radius: 0;
+        width: 50%;
+        height: 67px;
+        margin: 0;
+    }
+    
+    #howtouse .content{
+        width: 100%;
+        padding: 5px !important;
+    }
+}
+
+@media all and (max-width: 300px){
+    #autounit-data-popup .content {
+        width: 279px;
+    }
+    #autounit-title{
+        font-size: 23px;
+        height: 33px;
+    }
+    
+    #autounit{
+        width: 279px;
+    }
+    
+    #autounit .content > h2{
+        font-size: 21px;
+    }
+    
+    #howtouse{
+        width: 279px;
+    }
+}

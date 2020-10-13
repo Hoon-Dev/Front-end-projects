@@ -1,0 +1,129 @@
+#autounit .content:last-child{
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: #fafafa;
+}
+
+#autounit #history{
+    position: relative;
+    height: 67px;
+    
+    text-align: center;
+}
+
+#autounit #history ul{
+    font-size: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    z-index: 1;
+}
+
+#autounit #history li{
+    cursor: pointer;
+    
+    width: 16.5%;
+    font-size: 0;
+    margin-right: .2%;
+    display: inline-block;
+    background-color: white;
+    
+    position: relative;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    
+    overflow: hidden;
+}
+
+#autounit #history li.latest{
+/*    background-color: #e02343;*/
+    background-color: #555555;
+    border: 1px solid transparent;
+    animation-name: history-list;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(.25, 1.47, .24, 1.05);
+}
+
+#autounit #history li:last-child{
+    margin-right: 0;
+}
+
+@keyframes history-list{
+    0%{
+        opacity: 0;
+        transform: translate(0,30px);
+    }
+    40%{
+        opacity: .5;
+        transform: translate(0,-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+#autounit #history li::before{
+    content: attr(data);
+    color: #a3a3a3;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    font-weight: 100;
+}
+
+#autounit #history li.latest::before{
+    color: white;
+}
+
+#autounit #history span{
+    padding: 3px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+#autounit #history span::before{
+    content: "";
+    display: block;
+    color: black;
+    background-color: black;
+    width: 15px;
+    height: 1px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    background-color: #a3a3a3;
+}
+
+#autounit #history span::after{
+    content: "";
+    display: block;
+    color: black;
+    background-color: black;
+    width: 15px;
+    height: 1px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    background-color: #a3a3a3;
+}
+
+#autounit #history li.latest span::before{
+    background-color: white;
+}
+
+#autounit #history li.latest span::after{
+    background-color: white;
+}

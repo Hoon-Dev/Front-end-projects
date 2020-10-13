@@ -1,0 +1,136 @@
+#howtouse{
+    background-image: linear-gradient(90deg,#464444 0%, #333131 100%);
+    width: 100%;
+    padding-left: calc( (100% - 1080px)/2 );
+    margin-top: 4%;
+}
+
+#howtouse .container{
+    padding-top: 1%;
+    width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#howtouse .content{
+    color: #bababa;
+    
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+    width: 50%;
+    margin-top: 1%;
+    box-sizing: border-box;
+}
+
+#howtouse .content:nth-child(odd){
+    padding-right: 2%;
+}
+#howtouse .content:nth-child(even){
+    padding-left: 2%;
+}
+
+#howtouse .content h2{
+    color: #ffffff;
+    border-bottom: 3px solid white;
+    margin: 0;
+}
+
+#howtouse .content ol{
+    padding: 0;
+    counter-reset: count 0;
+}
+
+#howtouse .content:nth-child(2) ol li::before{
+    content: counter(count);
+    counter-increment: count 1;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top:0;
+    left:-24px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border: 2px solid #bababa;
+    border-radius: 5px;
+}
+
+#howtouse .content:nth-child(2) ol li{
+    margin-left: 24px;
+    margin-right: 10px;
+    position: relative;
+    display: inline;
+    vertical-align: top;
+}
+
+#howtouse .content:nth-child(3) h2{
+    position: relative;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+#howtouse .content:nth-child(3) h2::before{
+    content: "?";
+    width:30px;
+    height:30px;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+#howtouse .content:nth-child(3) ol{
+    margin-left: 19px;
+    color:#919191;
+}
+
+#howtouse .content:nth-child(3) hr{
+    border-color: #6f6f6f;
+}
+
+#howtouse .content:nth-child(4) table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid #d3d3d3;
+}
+
+#howtouse .content:nth-child(4) td{
+    border: 1px solid #bababa;
+}
+
+#howtouse .content:nth-child(4) tr:nth-child(1){
+    background-color: rgb(186, 186, 186);
+    font-weight: 700;
+    color: #333131;
+}
+
+#howtouse .content:nth-child(4) td:nth-child(1){
+    width: 15%;
+}
+
+#howtouse .content:nth-child(4) td{
+    padding: 1.5%;
+}
+
+#howtouse #copyright{
+    text-align: center;
+    background-color: rgba(185, 185, 185, 0.03);
+    color: #bababa;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: calc( (100% - 1080px)/-2 );
+    padding: 1% 0;
+}
+
+@media (max-width:1080px){
+    #howtouse .container{
+        width: 100%;
+    }
+    #howtouse #copyright{
+        margin-left: 0;
+    }
+}

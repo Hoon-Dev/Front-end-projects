@@ -1,0 +1,147 @@
+#autounit .content:nth-child(2){
+    text-align: center;
+}
+
+#autounit .content:nth-child(2) .form.px-1 h2:nth-child(1),
+#autounit .content:nth-child(2) .form.px-1 input:nth-child(2),
+#autounit .content:nth-child(2) .form.px-1 h2:nth-child(5),
+#autounit .content:nth-child(2) .form.px-1 input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.px-2 h2:nth-child(3),
+#autounit .content:nth-child(2) .form.px-2 input:nth-child(4),
+#autounit .content:nth-child(2) .form.px-2 h2:nth-child(5),
+#autounit .content:nth-child(2) .form.px-2 input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.vw h2:nth-child(1),
+#autounit .content:nth-child(2) .form.vw input:nth-child(2),
+#autounit .content:nth-child(2) .form.vw h2:nth-child(5),
+#autounit .content:nth-child(2) .form.vw input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.vh h2:nth-child(1),
+#autounit .content:nth-child(2) .form.vh input:nth-child(2),
+#autounit .content:nth-child(2) .form.vh h2:nth-child(5),
+#autounit .content:nth-child(2) .form.vh input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.rem h2:nth-child(3),
+#autounit .content:nth-child(2) .form.rem input:nth-child(4),
+#autounit .content:nth-child(2) .form.rem h2:nth-child(5),
+#autounit .content:nth-child(2) .form.rem input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.em h2:nth-child(3),
+#autounit .content:nth-child(2) .form.em input:nth-child(4),
+#autounit .content:nth-child(2) .form.em h2:nth-child(5),
+#autounit .content:nth-child(2) .form.em input:nth-child(6),
+
+#autounit .content:nth-child(2) .form.per h2:nth-child(1),
+#autounit .content:nth-child(2) .form.per input:nth-child(2),
+#autounit .content:nth-child(2) .form.per h2:nth-child(5),
+#autounit .content:nth-child(2) .form.per input:nth-child(6){
+    display: block;
+}
+
+#autounit .content:nth-child(2) .form h2{
+    text-align: left;
+    margin: 0;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 24px;
+    letter-spacing: -3px;
+    font-weight: 400;
+    display: none;
+    
+    position: relative;
+}
+
+#autounit .content:nth-child(2) .form h2::after{
+    content: "PX";
+    display: block;
+    color: #6c6c6c;
+    font-size: 17px;
+    letter-spacing: 0;
+    bottom: 0;
+    right: 5%;
+    position: absolute;
+}
+
+#autounit .content:nth-child(2) .form.px-1 h2:nth-child(5)::after{
+    content: "VW/H";
+}
+
+#autounit .content:nth-child(2) .form.px-2 h2:nth-child(5)::after{
+    content: "R/EM";
+}
+
+#autounit .content:nth-child(2) .form.per h2:nth-child(1)::after,
+#autounit .content:nth-child(2) .form.per h2:nth-child(5)::after{
+    content: "ANY";
+}
+
+#autounit .content:nth-child(2) .form input[type=text]{
+    width: 89%;
+    outline: 0;
+    border: 0;
+    color: #d14d4d;
+    background-color: #fff2f2;
+    border-bottom: 2px solid #e03d3d;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: right;
+    font-weight: 100;
+    
+    display: none;
+}
+
+#autounit .content:nth-child(2) .form input[type=text]::-ms-clear{
+    display: none;
+}
+
+#autounit .content:nth-child(2) .form input[type=text]::after{
+    content: "px";
+    display: inline;
+}
+
+#autounit .content:nth-child(2) .form+div{
+    margin-top: 5%;
+    width: 90%;
+    font-size: 0;
+    display: none;
+    border: 2px solid #e03d3d;
+}
+
+#autounit .content:nth-child(2) .form.px-1+div,
+#autounit .content:nth-child(2) .form.px-2+div{
+    display: inline-block;
+}
+
+#autounit .content:nth-child(2) .form+div input[type=checkbox]{
+    display: none;
+}
+
+#autounit .content:nth-child(2) .form+div label{
+    cursor: pointer;
+    position: relative;
+    
+    font-size: 16px;
+    letter-spacing: -1px;
+    line-height: 60px;
+    color: #e03d3d;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    background-color: white;
+}
+#autounit .content:nth-child(2) .form+div label+label{
+    color: white;
+    background-color: #e03d3d;
+}
+
+#autounit .content:nth-child(2) .form+div input[type=checkbox]:checked + label{
+    color: white;
+    background-color: #e03d3d;
+}
+#autounit .content:nth-child(2) .form+div input[type=checkbox]:checked + label + label{
+    color: #e03d3d;
+    background-color: white;
+}

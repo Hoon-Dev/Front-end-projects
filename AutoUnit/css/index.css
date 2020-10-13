@@ -1,0 +1,109 @@
+textarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    font-family:"Malgun Gothic";
+}
+
+#autounit-title{
+    color: white;
+    background-color: #e02343;
+    background-image: linear-gradient(0deg,#e02343 50%,#ffce00 150%);
+/*
+    background-image: url(../test.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+/*    background-image: linear-gradient(20deg,#800016 0%, #e02343 50%);*/
+/*    background-image: linear-gradient(0deg,#6c0080 -30%, #e02343 70%, #ffce00 150%);*/
+    
+    max-width: 100%;
+    height: 250px;
+    display: block;
+    
+    letter-spacing: -3px;
+    font-size: 50px;
+    
+    margin: 0;
+    padding-top: 30.784px;
+    padding-bottom: 30.784px;
+    padding-left: calc( (100% - 1080px)/2 );
+    box-sizing: border-box;
+}
+
+#autounit-title::after{
+    content: "반응형을 원하는 당신에게 최적의 솔루션";
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    
+    font-size: 18px;
+    font-weight: 400;
+
+    letter-spacing: 0;
+    
+    color: white;
+    margin-left: 20px;
+    border: 4px solid white;
+    padding: 7px;
+}
+
+#autounit{
+    max-width: 1080px;
+    margin-top: -138px;
+    margin-left: calc( (100% - 1080px)/2 );
+    box-sizing: border-box;
+    
+    background-color: white;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.13);
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#autounit .content{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    
+    border: 1px solid rgba(242, 242, 242, 0.78);
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 5px 0px 10px 0 rgba(0, 0, 0, 0.02);
+}
+
+#autounit .content > h2{
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: -4px;
+    padding-right: 4px;
+    margin-bottom: 10px;
+    color:#000000;
+}
+
+#autounit .content > div:nth-child(2){
+    width:100px;
+    height: 100px;
+    line-height: 90px;
+    border-radius: 50px;
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+    border: 5px solid #e02343;
+    color: #e02343;
+    box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.3) , 0 -6px 10px 0 rgba(255, 86, 86, 0.3) inset;
+}
+

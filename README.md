@@ -7,8 +7,8 @@
 </div>
 
 ## Contents
-- [AutoUnit](https://hoon-dev.github.io/Front-end-Projects/AutoUnit/)
-- [Calculator](https://hoon-dev.github.io/Front-end-Projects/Calculator/)
+- [AutoUnit](https://hoon-dev.github.io/Front-end-projects/AutoUnit/)
+- [Calculator](https://hoon-dev.github.io/Front-end-projects/Calculator/)
 
 ## License
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Hoon-Dev/Front-end-Projects/blob/master/LICENSE)
